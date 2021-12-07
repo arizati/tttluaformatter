@@ -1,9 +1,11 @@
 {
 	"name": "tttluaformatter",
+	"author": "flynn",
 	"displayName": "tttLuaFormatter",
 	"description": "",
 	"version": "0.0.1",
-	"publisher": "ttt",
+	"publisher": "flynn",
+	"repository": "https://github.com/arizati/tttluaformatter",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
