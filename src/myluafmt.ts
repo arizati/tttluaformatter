@@ -1,3 +1,5 @@
+import { ThemeIcon } from "vscode"
+
 const lustils = require("lustils")
 
 const { parse, defaultOptions } = require("luaparse")
@@ -310,6 +312,12 @@ const formatter = (conf?: any) => {
 						indent
 					)
 			}
+
+			if (node.base != undefined && node.base.type === "FunctionDeclaration") {
+
+				return "(" + prettyPrint(node.base, indent) + ")(" + mapPrettyPrintJoin(node.arguments, indent) + ")"
+			}
+
 			return prettyPrint(node.base, indent) + "(" + mapPrettyPrintJoin(node.arguments, indent) + ")"
 		},
 
